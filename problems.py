@@ -66,3 +66,21 @@ another_list = ['a', 'b', 'c', 'd', 'e', 'f']
 reverse(another_list)
 
 
+#Problem 6
+
+def is_palindrome (some_list):
+  for index in range(0, len(some_list)):
+    if (some_list[index] != some_list[len(some_list) - 1 - index]):
+      return False
+  return True
+
+a_list = ['s', 'p', 'a', 'm']
+print is_palindrome(a_list)
+
+another_list = ['k', 'a', 'y', 'a', 'k']
+print is_palindrome(another_list)
+
+
+another_list = [1, 2, 3, 2, 1]
+print is_palindrome(another_list)
+
