@@ -263,31 +263,58 @@ print "Primes btwn 0 and 100 inclusive: ", primelist(0, 100)
 
 
 #Problem 40
-#prolem asks to print one goldbach composition possibilty
-#screw that, print all possibilities
+#problem asks to print one goldbach composition possibilty for an even number
+#screw that, I'm going to print all possibilities for any integer
+
+#Every even integer greater than 2 can be expressed as the sum of two primes.
+#Every odd number greater than 5 can be expressed as the sum of three primes. 
+#(A prime may be used more than once in the same sum.)
+
 #prints all possible goldbach compositions of a number (http://en.wikipedia.org/wiki/Goldbach's_conjecture)
 print "~~~~~~~~~~~ PROBLEM 40 ~~~~~~~~~~~~"
+
 def goldbach (n):
-  #if n is odd, then we can't show goldbach composition
-  if (n%2 != 0 or n <= 2):
+  
+  #any integer 3 or below have no goldbach composition
+  #5 also has no goldbach composition
+  #4,6,7,8,....,infinity all have goldbach composition
+  if (n <= 3 or n == 5): 
     return
 
-
-  list_of_primes = primelist(0, n/2)  
-  #^generate primes up to n/2, inclusive
+  #n must be > 3 now
 
   goldbach_list = []
-  goldbach_pair = []
+  goldbach_set = []
 
-  for prime in list_of_primes:
-    if (isPrime(n - prime)):
-      goldbach_pair = [prime, n - prime]
-      goldbach_list.append(goldbach_pair)
+  if (n % 2 == 0):
+    list_of_primes = primelist(0, n/2)  
+    #^generate primes up to n/2, inclusive
+
+    for prime in list_of_primes:
+      if (isPrime(n - prime)):
+        goldbach_set = [prime, n - prime]
+        goldbach_list.append(goldbach_set)
+
+  else: #n is odd
+    list_of_primes = primelist(0, n/2)  
+    #^generate primes up to n/2, inclusive
+
+    for prime_i in list_of_primes:
+      for prime_j in list_of_primes:
+        if ((n - prime_i) % 2 == 0):
+          goldbach_list = goldbach(n - prime_i) + [prime_i]
+          goldbach_list.sort()
+          return goldbach_list
+        elif (isPrime(n - prime_i - prime_j)):
+          goldbach_set = [prime_i, prime_j, n - prime_i - prime_j]
+          goldbach_list.append(goldbach_set)
 
   return goldbach_list
 
 print "Goldbach composition of 1: ", goldbach(1)
 print "Goldbach composition of 2: ", goldbach(2)
+print "Goldbach composition of 11: ", goldbach(11)
+print "Goldbach composition of 15: ", goldbach(15)
 print "Goldbach composition of 28: ", goldbach(28)
 print "Goldbach composition of 36: ", goldbach(36)
 print "Goldbach composition of 49: ", goldbach(49)
