@@ -285,32 +285,32 @@ def goldbach (n):
 
   goldbach_list = []
   goldbach_set = []
+  list_of_primes = primelist(0, n/2)  
+  #^generate primes up to n/2, inclusive
 
   if (n % 2 == 0):
-    list_of_primes = primelist(0, n/2)  
-    #^generate primes up to n/2, inclusive
-
     for prime in list_of_primes:
       if (isPrime(n - prime)):
         goldbach_set = [prime, n - prime]
         goldbach_list.append(goldbach_set)
 
   else: #n is odd
-    list_of_primes = primelist(0, n/2)  
-    #^generate primes up to n/2, inclusive
-
-    for prime_i in list_of_primes:
-      for prime_j in list_of_primes:
-        if ((n - prime_i) % 2 == 0):
-          goldbach_list = goldbach(n - prime_i) + [prime_i]
-          goldbach_list.sort()
-          return goldbach_list
-        elif (isPrime(n - prime_i - prime_j)):
-          goldbach_set = [prime_i, prime_j, n - prime_i - prime_j]
-          goldbach_list.append(goldbach_set)
+    for prime in list_of_primes:
+      if ((n - prime) % 2 == 0):
+        goldbach_list = goldbach(n - prime) + [prime]
+        goldbach_list.sort()
+      elif (isPrime(n - prime - 2)):
+        goldbach_set = [prime, 2, n - prime - 2]
+        
+        #print goldbach_set
+        goldbach_list.append(goldbach_set)
+        #print goldbach_list
+        goldbach_list.sort()
 
   return goldbach_list
 
+print "Goldbach compisition of odd_num: [prime1, [prime2, prime3], [prime4, prime5], ...]"
+print "where odd_num = prime1 + prime2 + prime 3 = prime1 + prime4 + prime5 = ..."
 print "Goldbach composition of 1: ", goldbach(1)
 print "Goldbach composition of 2: ", goldbach(2)
 print "Goldbach composition of 11: ", goldbach(11)
@@ -319,4 +319,28 @@ print "Goldbach composition of 28: ", goldbach(28)
 print "Goldbach composition of 36: ", goldbach(36)
 print "Goldbach composition of 49: ", goldbach(49)
 
+
+#Problem 41
+#Print goldbach composition for all even numbers greater than 'lower' and less than or equal to 'upper'
+print "~~~~~~~~~~~ PROBLEM 41 ~~~~~~~~~~~~"
+
+def goldbach_list (lower, upper):
+
+  if (lower % 2 != 0):
+    lower = lower + 1
+
+  goldbach_list = []
+  for i in range (lower, upper + 1, 2):
+    print i, ": ", goldbach(i)
+  
+  
+
+print "Even Goldbach compositions from 1 to 10: "
+goldbach_list(1, 10)
+print "Even Goldbach compositions from 5 to 16: "
+goldbach_list(5, 16)
+print "Even Goldbach compositions from 20 to 35: "
+goldbach_list(20, 35)
+print "Even Goldbach compositions from 46 to 100: "
+goldbach_list(46, 100)
 
