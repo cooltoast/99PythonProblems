@@ -29,6 +29,8 @@
 26. Generate the combinations of K distinct objects chosen from the N elements of a list. In how many ways can a committee of 3 be chosen from a group of 12 people? We all know that there are C(12,3) = 220 possibilities (C(N,K) denotes the well-known binomial coefficients). For pure mathematicians, this result may be great. But we want to really generate all the possibilities in a list.
 27. Group the elements of a set into disjoint subsets.
 28. Sorting a list of lists according to length of sublists.
+29. (N/A)
+30. (N/A)
 31. Determine whether a given integer number is prime.
 32. Determine the greatest common divisor of two positive integer numbers. Use Euclid's algorithm.
 33. Determine whether two positive integer numbers are coprime. Two numbers are coprime if their greatest common divisor equals 1.
