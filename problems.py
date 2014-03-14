@@ -93,7 +93,7 @@ print is_palindrome(another_list)
 #Problem 31
 print "~~~~~~~~~~~ PROBLEM 31 ~~~~~~~~~~~~"
 def isPrime (n):
-  if (n == 1): 
+  if (n <= 1): 
     return False
   for i in range(2, int(math.sqrt(n)) + 1):
     if (n % i == 0):
@@ -237,4 +237,28 @@ print "Prime factorization of 12 is: ", prime_factors_mult(12)
 print "Prime factorization of 24 is: ", prime_factors_mult(24)
 print "Prime factorization of 144 is: ", prime_factors_mult(144)
 print "Prime factorization of 43735 is: ", prime_factors_mult(43735)
+
+
+#Problem 39
+#prints primes such that lower <= primes[] <= upper
+print "~~~~~~~~~~~ PROBLEM 39 ~~~~~~~~~~~~"
+def primelist (lower, upper):
+  #if upper is <2, than we can't list any primes
+  if (upper < 2):
+    return
+
+  primelist = []  
+
+  for i in range(lower, upper + 1):
+    if (isPrime(i)):
+      primelist.append(i)  
+      
+  return primelist
+
+print "Primes btwn -345 and 1 inclusive: ", primelist(-345, 1)
+print "Primes btwn 23 and 57 inclusive: ", primelist(23, 57)
+print "Primes btwn 11 and 67 inclusive: ", primelist(11, 67)
+print "Primes btwn 10 and 30 inclusive: ", primelist(10, 30)
+print "Primes btwn 0 and 100 inclusive: ", primelist(0, 100)
+
 
