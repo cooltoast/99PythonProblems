@@ -150,9 +150,28 @@ print "Are 11 & 1032 coprime? ", coprime(11, 1032)
 print "Are 1785 & 546 coprime? ", coprime(1785, 546)
 print "Are 31415926534676736647 & 438478473847834834784748 coprime? ", coprime(31415926534676736647, 438478473847834834784748)
 
-#Problem 34
 
+#Problem 34
+#computes the totient function of n (http://en.wikipedia.org/wiki/Euler's_totient_function)
 print "~~~~~~~~~~~ PROBLEM 34 ~~~~~~~~~~~~"
+def phi (n):
+  totatives = []
+  for i in range(1, n + 1):
+    if (coprime(n, i)):
+      totatives.append(i)
+
+  return totatives    
+
+print "How many totatives of 1? ", len(phi(1)), phi(1)
+print "How many totatives of 9? ", len(phi(9)), phi(9)
+print "How many totatives of 10? ", len(phi(10)), phi(10)
+print "How many totatives of 15? ", len(phi(15)), phi(15)
+print "How many totatives of 24? ", len(phi(24)), phi(24)
+print "How many totatives of 36? ", len(phi(36)), phi(36)
+
+#Problem 35
+
+print "~~~~~~~~~~~ PROBLEM 35 ~~~~~~~~~~~~"
 def prime_factors (n):
   #easy basic case
   if (isPrime(n)):
