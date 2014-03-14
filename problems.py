@@ -192,6 +192,49 @@ def prime_factors (n):
 print "Prime factors of 7 are: ", prime_factors(7)
 print "Prime factors of 15 are: ", prime_factors(15)
 print "Prime factors of 34 are: ", prime_factors(34)
+print "Prime factors of 12 are: ", prime_factors(12)
 print "Prime factors of 24 are: ", prime_factors(24)
 print "Prime factors of 144 are: ", prime_factors(144)
 print "Prime factors of 43735 are: ", prime_factors(43735)
+
+
+#Problem 36
+
+print "~~~~~~~~~~~ PROBLEM 36 ~~~~~~~~~~~~"
+def prime_factors_mult (n):
+
+  prime_factors_mult = []
+
+  #easy basic case
+  if (isPrime(n)):
+    prime_factors_mult.append(n)
+    return prime_factors_mult
+
+  list_of_possible_prime_factors = []
+  
+  for i in range(2, n/2 + 1):
+    if (isPrime(i)):
+      list_of_possible_prime_factors.append(i)
+
+  #check for divisibilty, append to a list if true
+  for prime in list_of_possible_prime_factors:
+    factor_mult = []
+    factor_counter = 0
+    while (n % prime == 0):
+      n = n/prime
+      factor_counter = factor_counter + 1
+    if (factor_counter > 0):
+      factor_mult = [prime, factor_counter]
+      prime_factors_mult.append(factor_mult)  
+  return prime_factors_mult
+
+
+print "Prime factorization of n: [[prime_factor, multiplicity_of_factor], ...]"
+print "Prime factorization of 7 is: ", prime_factors_mult(7)
+print "Prime factorization of 15 is: ", prime_factors_mult(15)
+print "Prime factorization of 34 is: ", prime_factors_mult(34)
+print "Prime factorization of 12 is: ", prime_factors_mult(12)
+print "Prime factorization of 24 is: ", prime_factors_mult(24)
+print "Prime factorization of 144 is: ", prime_factors_mult(144)
+print "Prime factorization of 43735 is: ", prime_factors_mult(43735)
+
