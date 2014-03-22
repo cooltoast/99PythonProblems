@@ -153,6 +153,18 @@ print "Split list at 6th element: ", split_list([1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 print "Split list at 7th element: ", split_list([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 7)
 
 
+#Problem 18
+print "~~~~~~~~~~~ PROBLEM 18 ~~~~~~~~~~~~~"
+def slice(some_list, I, K):
+  return some_list[I - 1:K]
+
+a_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print "         Original list: ", a_list
+print "Slice list at 3rd and 6th element: ", slice([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3, 6)
+print "Slice list at 1st and 7th element: ", slice([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 1, 7)
+print "Slice list at 6th and 10th element: ", slice([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 6, 10)
+print "Slice list at 4th and 8th element: ", slice([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 4, 8)
+
 
 #Problem 20
 print "~~~~~~~~~~~ PROBLEM 20 ~~~~~~~~~~~~~"
