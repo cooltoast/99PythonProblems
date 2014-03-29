@@ -264,6 +264,18 @@ print "Lotto List of 5 elements up to 20: ", lotto(5,20)
 print "Lotto List of 10 elements up to 100: ", lotto(10, 100)
 
 
+#Problem 25
+print "~~~~~~~~~~~ PROBLEM 23 ~~~~~~~~~~~~~"
+def rand_perm (some_list):
+  return random.sample(some_list, len(some_list))
+
+a_list = [1,2,3,4,5,6,7,8,9,10]
+print "                       Original list: ", a_list
+print " Random list of 4 from Original List: ", rand_perm(a_list)
+print " Random list of 4 from Original List: ", rand_perm(a_list)
+print " Random list of 4 from Original List: ", rand_perm(a_list)
+
+
 #Problem 31
 print "~~~~~~~~~~~ PROBLEM 31 ~~~~~~~~~~~~"
 def isPrime (n):
