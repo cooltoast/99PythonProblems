@@ -89,6 +89,21 @@ another_list = [1, 2, 3, 2, 1]
 print is_palindrome(another_list)
 
 
+#Problem 7
+print "~~~~~~~~~~~ PROBLEM 7 ~~~~~~~~~~~~~"
+def flatten(some_list, flattened_list):   
+  for i in some_list:
+      if isinstance(i, list):
+          flatten(i, flattened_list)
+      else:
+          flattened_list.append(i)
+  return outlist
+
+a_list = [0, 1, [2, [3]], 4, 5, [6, 7], [8,[9,[10]]]]
+outlist = []
+print flatten(a_list, outlist)
+
+
 #Problem 8
 print "~~~~~~~~~~~ PROBLEM 8 ~~~~~~~~~~~~~"
 def compress (some_list):
@@ -280,7 +295,7 @@ print " Random list of 4 from Original List: ", rand_perm(a_list)
 #Problem 26
 print "~~~~~~~~~~~ PROBLEM 26 ~~~~~~~~~~~~~"
 def combination (some_list, K):
-  itertools.combinations(some_list, K)
+  return itertools.combinations(some_list, K)
 
 a_list = [1,2,3,4,5,6,7,8,9,10]
 print "                       Original list: ", a_list
