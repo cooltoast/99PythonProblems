@@ -40,6 +40,6 @@
 37. A more efficient totient function.
 38. Compare totient functions.
 39. Generate a list of primes in a given range.
-40. Write a function that returns the Goldbach composition of a number.
+40. Write a function that returns the Goldbach composition of a number. (Problem asks to print one goldbach composition possibilty for an even number. Screw that, I'm going to print all possibilities for any integer).
 
 
