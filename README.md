@@ -1,4 +1,4 @@
-99 Python Problems
+99 Python Problems & Project Euler problems
 ===================
 
 1. Find the last element of a list.
@@ -36,3 +36,17 @@
 33. Determine whether two positive integer numbers are coprime. Two numbers are coprime if their greatest common divisor equals 1.
 34. Use a primitive method to calculate Euclid's totient function.
 35. Determine the prime factors of a given positive integer. Construct a flat list containing the prime factors in ascending order.
+36. Determine prime factorization of a number. Similar to problem P35, except the result is a list of pairs [p,m] where prime factor, p, occurs m times in the factorization of the number.
+37. A more efficient totient function.
+38. Compare totient functions.
+39. Generate a list of primes in a given range.
+40. Write a function that returns the Goldbach composition of a number. (Problem asks to print one goldbach composition possibilty for an even number. Screw that, I'm going to print all possibilities for any integer).
+41. Print list of Goldbach compositions. Given a range of integers by its lower and upper limit, print a list of all even numbers and their Goldbach composition.
+42. (N/A)
+43. (N/A)
+44. (N/A)
+45. (N/A)
+46. 
+
+
+
