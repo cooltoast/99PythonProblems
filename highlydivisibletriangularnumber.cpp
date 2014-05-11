@@ -2,36 +2,47 @@
 
 using namespace std;
 
-bool divisors_500 (int n)
+int divisors (int n)
 {
   int divisors = 2;
 
   for (int i = 2; i < n; i++)
   {
+    
     if (n % i == 0)
     {
       divisors++;
     }
   }
-  return (divisors > 500);
+
+  
+  return divisors;
 }
 
 int main() {
 
-  int num = 55;
   int addnum = 10;
+  int num = 55;
 
-  while (num < 100000)
+  /*
+  while (num < 100000000000)
   {
     addnum++;
     num = num + addnum; 
-  }
+    cout << num << endl;
+  }*/
 
-  while (!divisors_500(num))
+  cout << endl;
+  cout << "begin while loop" << endl;
+
+  while (divisors(num) <= 500)
   { 
     addnum++;
     num = num + addnum;
+    cout << num << endl;
   }
+
+  cout << endl;
 
   cout << num << endl;      
 
