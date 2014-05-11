@@ -87,6 +87,32 @@ another_list = [1, 2, 3, 2, 1]
 print is_palindrome(another_list)
 
 
+
+
+
+a_list = ['s', 'p', 'a', 'm']
+print is_palindrome(a_list)
+
+another_list = ['k', 'a', 'y', 'a', 'k']
+print is_palindrome(another_list)
+
+
+another_list = [1, 2, 3, 2, 1]
+print is_palindrome(another_list)
+
+
+#Problem 8
+print "~~~~~~~~~~~ PROBLEM 8 ~~~~~~~~~~~~~"
+def compress (some_list):
+  for i in range(0, len(some_list)):
+    for j in range(len(some_list) - 1, i, -1):
+      if (some_list[i] == some_list[j]):
+        some_list.remove(some_list[j])  
+      
+  return some_list
+
+print compress([1, 1, 2, 1, 2, 3, 4, 4, 5, 6, 3, 5, 7, 8, 9, 10, 10])
+
 #work on lists to do problems 7-30 
 
 #Problem 16
