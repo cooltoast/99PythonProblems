@@ -249,6 +249,21 @@ print " Random list of 6 from Original List: ", rand_list(a_list, 6)
 print "Random list of 10 from Original List: ", rand_list(a_list, 10)
 
 
+#Problem 24
+print "~~~~~~~~~~~ PROBLEM 24 ~~~~~~~~~~~~~"
+def lotto (N, M):
+  lotto_list = []
+  for i in range(0, N):
+    lotto_num = random.randint(1, M)
+    lotto_list.append(lotto_num)
+  return lotto_list
+
+print "Lotto List of 2 elements up to 4: ", lotto(2, 4)
+print "Lotto List of 4 elements up to 10: ", lotto(4, 10)
+print "Lotto List of 5 elements up to 20: ", lotto(5,20)
+print "Lotto List of 10 elements up to 100: ", lotto(10, 100)
+
+
 #Problem 31
 print "~~~~~~~~~~~ PROBLEM 31 ~~~~~~~~~~~~"
 def isPrime (n):
