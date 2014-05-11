@@ -101,6 +101,19 @@ print compress([1, 1, 2, 1, 2, 3, 4, 4, 5, 6, 3, 5, 7, 8, 9, 10, 10])
 
 #work on lists to do problems 7-30 
 
+
+#Problem 14
+print "~~~~~~~~~~~ PROBLEM 14 ~~~~~~~~~~~~~"
+def duplicate (some_list):
+  duplicate_list = []
+  for i in some_list:
+    duplicate_list.append(i) 
+    duplicate_list.append(i)
+  return duplicate_list  
+
+print duplicate([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+
 #Problem 16
 print "~~~~~~~~~~~ PROBLEM 16 ~~~~~~~~~~~~~"
 def drop (some_list, n):
@@ -450,7 +463,6 @@ print "Even Goldbach compositions from 20 to 35: "
 goldbach_list(20, 35)
 print "Even Goldbach compositions from 46 to 100: "
 goldbach_list(46, 100)
-
 
 
 
