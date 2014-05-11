@@ -87,20 +87,6 @@ another_list = [1, 2, 3, 2, 1]
 print is_palindrome(another_list)
 
 
-
-
-
-a_list = ['s', 'p', 'a', 'm']
-print is_palindrome(a_list)
-
-another_list = ['k', 'a', 'y', 'a', 'k']
-print is_palindrome(another_list)
-
-
-another_list = [1, 2, 3, 2, 1]
-print is_palindrome(another_list)
-
-
 #Problem 8
 print "~~~~~~~~~~~ PROBLEM 8 ~~~~~~~~~~~~~"
 def compress (some_list):
@@ -164,6 +150,20 @@ print "Slice list at 3rd and 6th element: ", slice([1, 2, 3, 4, 5, 6, 7, 8, 9, 1
 print "Slice list at 1st and 7th element: ", slice([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 1, 7)
 print "Slice list at 6th and 10th element: ", slice([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 6, 10)
 print "Slice list at 4th and 8th element: ", slice([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 4, 8)
+
+
+#Problem 19
+print "~~~~~~~~~~~ PROBLEM 19 ~~~~~~~~~~~~~"
+def rotate(some_list, n):
+  temp_list = some_list[n:]
+  return temp_list + some_list[:n]
+
+a_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print "         Original list:     ", a_list
+print "rotate list at 3rd element: ", rotate([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3)
+print "rotate list at 6th element: ", rotate([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 6)
+print "rotate list at 9th element: ", rotate([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 9)
+print "rotate list at 2nd element: ", rotate([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2)
 
 
 #Problem 20
