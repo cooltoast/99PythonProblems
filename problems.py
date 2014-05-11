@@ -229,7 +229,7 @@ def prime_factors_mult (n):
   return prime_factors_mult
 
 
-print "Prime factorization of n: [[prime_factor, multiplicity_of_factor], ...]"
+print "Prime factorization of n: [[prime_factor, #_times_factor_occurs], ...]"
 print "Prime factorization of 7 is: ", prime_factors_mult(7)
 print "Prime factorization of 15 is: ", prime_factors_mult(15)
 print "Prime factorization of 34 is: ", prime_factors_mult(34)
