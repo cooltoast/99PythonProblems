@@ -121,6 +121,26 @@ def compress (some_list):
 
 print compress([1, 1, 2, 1, 2, 3, 4, 4, 5, 6, 3, 5, 7, 8, 9, 10, 10])
 
+
+#Problem 9
+print "~~~~~~~~~~~ PROBLEM 9 ~~~~~~~~~~~~~"
+def pack(some_list):
+  packed_list = []   
+  sub_list = []
+  for i in some_list:
+    sub_list = [i]
+    for j in some_list[1:]:
+      if i == j:
+        sub_list.append(j)
+      else:
+        packed_list.append(sub_list)
+  return packed_list   
+
+a_list = [1, 1, 2, 1, 2, 3, 4, 4, 5, 6, 3, 5, 7, 8, 9, 10, 10]
+print a_list
+print pack([1, 1, 2, 1, 2, 3, 4, 4, 5, 6, 3, 5, 7, 8, 9, 10, 10])
+
+
 #work on lists to do problems 7-30 
 
 
