@@ -106,6 +106,11 @@ sum = 0
 for i in nums:
   sum = sum + i
 
-sum = sum / 10000000000000000000000000000000000000000
+sumstr = str(sum)
 
-print sum
+for i in range (0, 10):
+  print sumstr[i],
+
+#sum = sum / 10000000000000000000000000000000000000000
+
+#print sum
