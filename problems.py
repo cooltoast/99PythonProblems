@@ -114,6 +114,18 @@ def duplicate (some_list):
 print duplicate([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 
 
+#Problem 15
+print "~~~~~~~~~~~ PROBLEM 15 ~~~~~~~~~~~~~"
+def replicate (some_list, n):
+  duplicate_list = []
+  for i in some_list:
+    for index in range(0,n):
+      duplicate_list.append(i) 
+  return duplicate_list  
+
+print replicate([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 4)
+
+
 #Problem 16
 print "~~~~~~~~~~~ PROBLEM 16 ~~~~~~~~~~~~~"
 def drop (some_list, n):
