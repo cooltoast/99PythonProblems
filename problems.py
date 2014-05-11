@@ -1,3 +1,5 @@
+import math
+
 #Problem 1
 
 def last (some_list):
@@ -75,12 +77,36 @@ def is_palindrome (some_list):
   return True
 
 a_list = ['s', 'p', 'a', 'm']
-print is_palindrome(a_list)
+#print is_palindrome(a_list)
 
 another_list = ['k', 'a', 'y', 'a', 'k']
-print is_palindrome(another_list)
+#print is_palindrome(another_list)
 
 
 another_list = [1, 2, 3, 2, 1]
-print is_palindrome(another_list)
+#print is_palindrome(another_list)
 
+
+#work on lists to do problems 7-30 
+
+
+#Problem 31
+
+def isPrime (n):
+  print n,
+  if (n == 1): 
+    return False
+  for i in range(2, int(math.sqrt(n)) + 1):
+    if (n % i == 0):
+      return False
+  #if we reach here, then we have found no divisors of n
+  #therefore n is prime    
+  return True
+
+print isPrime(4)
+print isPrime(7)
+print isPrime(15)
+print isPrime(19)
+print isPrime(83)
+print isPrime(91)
+print isPrime(3571)       
