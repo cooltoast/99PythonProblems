@@ -265,7 +265,7 @@ print "Lotto List of 10 elements up to 100: ", lotto(10, 100)
 
 
 #Problem 25
-print "~~~~~~~~~~~ PROBLEM 23 ~~~~~~~~~~~~~"
+print "~~~~~~~~~~~ PROBLEM 25 ~~~~~~~~~~~~~"
 def rand_perm (some_list):
   return random.sample(some_list, len(some_list))
 
