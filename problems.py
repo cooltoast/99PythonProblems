@@ -1,4 +1,5 @@
 import math
+import random
 
 #Problem 1
 print "~~~~~~~~~~~ PROBLEM 1 ~~~~~~~~~~~~~"
@@ -234,6 +235,19 @@ def range_list (lower, upper):
 print "Range of list from 1 to 10: ", range_list(1, 10)
 print "Range of list from 4 to 30: ", range_list(4, 30)
 print "Range of list from 17 to 56: ", range_list(17, 56)
+
+
+#Problem 23
+print "~~~~~~~~~~~ PROBLEM 23 ~~~~~~~~~~~~~"
+def rand_list (some_list, n):
+  return random.sample(some_list, n)
+
+a_list = [1,2,3,4,5,6,7,8,9,10]
+print "                       Original list: ", a_list
+print " Random list of 4 from Original List: ", rand_list(a_list, 4)
+print " Random list of 6 from Original List: ", rand_list(a_list, 6)
+print "Random list of 10 from Original List: ", rand_list(a_list, 10)
+
 
 #Problem 31
 print "~~~~~~~~~~~ PROBLEM 31 ~~~~~~~~~~~~"
