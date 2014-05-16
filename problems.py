@@ -89,6 +89,51 @@ print is_palindrome(another_list)
 
 #work on lists to do problems 7-30 
 
+#Problem 16
+print "~~~~~~~~~~~ PROBLEM 16 ~~~~~~~~~~~~~"
+def drop (some_list, n):
+  for i in range(n - 1, len(some_list), n):
+    some_list[i] = "~~~~~~~~~~****remove me!****~~~~~~~~~~"
+  for element in some_list:  
+    if element == "~~~~~~~~~~****remove me!****~~~~~~~~~~":
+      some_list.remove(element)
+  return some_list  
+
+a_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print "         Original list: ", a_list
+print "Drop every 2nd element: ", drop([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2)
+print "Drop every 3rd element: ", drop([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3)
+print "Drop every 4th element: ", drop([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 4)
+print "Drop every 5th element: ", drop([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5)
+print "Drop every 6th element: ", drop([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 6)
+print "Cumulative dropping commence..."
+print "         Original list: ", a_list
+print "Drop every 2nd element: ", drop(a_list, 2)
+print "Drop every 3rd element: ", drop(a_list, 3)
+print "Drop every 4th element: ", drop(a_list, 4)
+
+
+#Problem 20
+print "~~~~~~~~~~~ PROBLEM 20 ~~~~~~~~~~~~~"
+def remove_at (some_list, n):
+  element_to_rm = some_list[n - 1]
+  some_list.remove(element_to_rm)
+  return some_list  
+
+a_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+print "Original list:        ", a_list
+print "Drop the 2nd element: ", remove_at([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 2)
+print "Drop the 3rd element: ", remove_at([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 3)
+print "Drop the 4th element: ", remove_at([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 4)
+print "Cumulative dropping commence..."
+print "Original list:        ", a_list
+print "Drop the 2nd element: ", remove_at(a_list, 2)
+print "Drop the 3rd element: ", remove_at(a_list, 3)
+print "Drop the 4th element: ", remove_at(a_list, 4)
+print "Drop the 5th element: ", remove_at(a_list, 5)
+print "Drop the 6th element: ", remove_at(a_list, 6)
+
+
 
 #Problem 31
 print "~~~~~~~~~~~ PROBLEM 31 ~~~~~~~~~~~~"
@@ -343,4 +388,9 @@ print "Even Goldbach compositions from 20 to 35: "
 goldbach_list(20, 35)
 print "Even Goldbach compositions from 46 to 100: "
 goldbach_list(46, 100)
+
+
+
+
+
 

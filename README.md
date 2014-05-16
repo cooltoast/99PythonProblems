@@ -42,6 +42,10 @@
 39. Generate a list of primes in a given range.
 40. Write a function that returns the Goldbach composition of a number. (Problem asks to print one goldbach composition possibilty for an even number. Screw that, I'm going to print all possibilities for any integer).
 41. Print list of Goldbach compositions. Given a range of integers by its lower and upper limit, print a list of all even numbers and their Goldbach composition.
+42. (N/A)
+43. (N/A)
+44. (N/A)
+45. (N/A)
 
 
 
