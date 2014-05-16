@@ -1,5 +1,6 @@
 import math
 import random
+import itertools
 
 #Problem 1
 print "~~~~~~~~~~~ PROBLEM 1 ~~~~~~~~~~~~~"
@@ -274,6 +275,18 @@ print "                       Original list: ", a_list
 print " Random list of 4 from Original List: ", rand_perm(a_list)
 print " Random list of 4 from Original List: ", rand_perm(a_list)
 print " Random list of 4 from Original List: ", rand_perm(a_list)
+
+
+#Problem 26
+print "~~~~~~~~~~~ PROBLEM 26 ~~~~~~~~~~~~~"
+def combination (some_list, K):
+  itertools.combinations(some_list, K)
+
+a_list = [1,2,3,4,5,6,7,8,9,10]
+print "                       Original list: ", a_list
+print " Random list of 4 from Original List: ", combination(a_list, 3)
+print " Random list of 4 from Original List: ", combination(a_list, 2)
+print " Random list of 4 from Original List: ", combination(a_list, 6)
 
 
 #Problem 31
