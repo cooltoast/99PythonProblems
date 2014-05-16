@@ -93,7 +93,6 @@ print is_palindrome(another_list)
 #Problem 31
 print "~~~~~~~~~~~ PROBLEM 31 ~~~~~~~~~~~~"
 def isPrime (n):
-  print n,
   if (n == 1): 
     return False
   for i in range(2, int(math.sqrt(n)) + 1):
@@ -129,8 +128,46 @@ def gcd (a, b):
   return gcd(b, a % b)    
   
 
-print gcd(2, 4) 
-print gcd(4, 7)
-print gcd(12, 1032)
-print gcd(1785, 546)
-print gcd(31415926534676736647, 438478473847834834784748)
+print "GCD of 2 & 4 is: ", gcd(2, 4) 
+print "GCD of 4 & 7 is: ", gcd(4, 7)
+print "GCD of 36 & 63 is: ", gcd(36, 63)
+print "GCD of 12 & 1032 is: ", gcd(12, 1032)
+print "GCD of 1785 & 546 is: ", gcd(1785, 546)
+print "GCD of 31415926534676736647 & 438478473847834834784748 is: ", gcd(31415926534676736647, 438478473847834834784748)
+
+#Problem 33
+#problem 32 makes this almost trivial
+print "~~~~~~~~~~~ PROBLEM 33 ~~~~~~~~~~~~"
+def coprime (a, b):
+  if (gcd(a, b) == 1):    
+    return True
+  return False
+
+print "Are 2 & 4 coprime? ", coprime(2, 4) 
+print "Are 4 & 7 coprime? ", coprime(4, 7)
+print "Are 36 & 5 coprime? ", coprime(36, 5)
+print "Are 11 & 1032 coprime? ", coprime(11, 1032)
+print "Are 1785 & 546 coprime? ", coprime(1785, 546)
+print "Are 31415926534676736647 & 438478473847834834784748 coprime? ", coprime(31415926534676736647, 438478473847834834784748)
+
+#Problem 34
+
+print "~~~~~~~~~~~ PROBLEM 34 ~~~~~~~~~~~~"
+def prime_factors (n):
+  #easy basic case
+  if (isPrime(n)):
+    return n
+
+  #find all primes up to n/2  
+  #check for divisibilty, append to a list if true
+  prime_factors = []
+  for i in range (2, n/2 + 1):
+    if (isPrime(i) and n % i == 0):
+      prime_factors.append(i)
+
+  return prime_factors   
+
+print "Prime factors of 15 are: ", prime_factors(15)
+print "Prime factors of 34 are: ", prime_factors(34)
+print "Prime factors of 24 are: ", prime_factors(24)
+print "Prime factors of 43735 are: ", prime_factors(43735)
