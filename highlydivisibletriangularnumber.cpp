@@ -8,13 +8,11 @@ int divisors (int n)
 
   for (int i = 2; i < n; i++)
   {
-    
     if (n % i == 0)
     {
       divisors++;
     }
   }
-
   
   return divisors;
 }
@@ -22,27 +20,17 @@ int divisors (int n)
 int main() {
 
   int addnum = 10;
-  int num = 55;
-
-  /*
-  while (num < 100000000000)
-  {
-    addnum++;
-    num = num + addnum; 
-    cout << num << endl;
-  }*/
+  int num = 55 + 11 + 12 + 13 + 14 + 15 + 16 + 17 + 18 + 19 + 20 + 21 + 22;
 
   cout << endl;
-  cout << "begin while loop" << endl;
 
   while (divisors(num) <= 500)
   { 
     addnum++;
     num = num + addnum;
-    cout << num << endl;
   }
 
-  cout << endl;
+  
 
   cout << num << endl;      
 
