@@ -113,6 +113,21 @@ print "Drop every 3rd element: ", drop(a_list, 3)
 print "Drop every 4th element: ", drop(a_list, 4)
 
 
+#Problem 17
+print "~~~~~~~~~~~ PROBLEM 17 ~~~~~~~~~~~~~"
+def split_list (some_list, n):
+  return some_list[:n], some_list[n:]   
+
+a_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print "         Original list: ", a_list
+print "Split list at 3rd element: ", split_list([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3)
+print "Split list at 4th element: ", split_list([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 4)
+print "Split list at 5th element: ", split_list([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5)
+print "Split list at 6th element: ", split_list([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 6)
+print "Split list at 7th element: ", split_list([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 7)
+
+
+
 #Problem 20
 print "~~~~~~~~~~~ PROBLEM 20 ~~~~~~~~~~~~~"
 def remove_at (some_list, n):
@@ -134,6 +149,15 @@ print "Drop the 5th element: ", remove_at(a_list, 5)
 print "Drop the 6th element: ", remove_at(a_list, 6)
 
 
+#Problem 22
+print "~~~~~~~~~~~ PROBLEM 22 ~~~~~~~~~~~~~"
+def range_list (lower, upper):
+  range_list = range(lower, upper + 1)
+  return range_list   
+
+print "Range of list from 1 to 10: ", range_list(1, 10)
+print "Range of list from 4 to 30: ", range_list(4, 30)
+print "Range of list from 17 to 56: ", range_list(17, 56)
 
 #Problem 31
 print "~~~~~~~~~~~ PROBLEM 31 ~~~~~~~~~~~~"
