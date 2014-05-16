@@ -212,6 +212,19 @@ print "Drop the 5th element: ", remove_at(a_list, 5)
 print "Drop the 6th element: ", remove_at(a_list, 6)
 
 
+#Problem 21
+print "~~~~~~~~~~~ PROBLEM 21 ~~~~~~~~~~~~~"
+def insert_at (some_list, n, index):
+  some_list.insert(index, n)
+  return some_list
+     
+a_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+print "Original list:        ", a_list
+print "Insert 15 at index 2: ", insert_at(a_list, 15, 2)
+print "Insert 45 at index 1: ", insert_at(a_list, 45, 1)
+print "Insert 88 at index 5: ", insert_at(a_list, 88, 5)
+
+
 #Problem 22
 print "~~~~~~~~~~~ PROBLEM 22 ~~~~~~~~~~~~~"
 def range_list (lower, upper):
