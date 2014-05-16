@@ -1,4 +1,4 @@
-99 Python Problems
+99 Python Problems & Project Euler problems
 ===================
 
 1. Find the last element of a list.
