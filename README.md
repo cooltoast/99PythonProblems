@@ -36,4 +36,7 @@
 33. Determine whether two positive integer numbers are coprime. Two numbers are coprime if their greatest common divisor equals 1.
 34. Use a primitive method to calculate Euclid's totient function.
 35. Determine the prime factors of a given positive integer. Construct a flat list containing the prime factors in ascending order.
-Problem 36: Determine prime factorization of a number. Similar to problem P35, except the result is a list of pairs [p,m] where prime factor, p, occurs m times in the factorization of the number.
+36. Determine prime factorization of a number. Similar to problem P35, except the result is a list of pairs [p,m] where prime factor, p, occurs m times in the factorization of the number.
+37. A more efficient totient function.
+38. Compare totient functions.
+39. Generate a list of primes in a given range.
