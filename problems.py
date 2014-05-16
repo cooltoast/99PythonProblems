@@ -1,7 +1,7 @@
 import math
 
 #Problem 1
-
+print "~~~~~~~~~~~ PROBLEM 1 ~~~~~~~~~~~~~"
 def last (some_list):
   print some_list[len(some_list) - 1]
 
@@ -13,7 +13,7 @@ last(another_list)
 
 
 #Problem 2
-
+print "~~~~~~~~~~~ PROBLEM 2 ~~~~~~~~~~~~~"
 def penultimate (some_list):
   print some_list[len(some_list) - 2]
 
@@ -25,7 +25,7 @@ penultimate(another_list)
 
 
 #Problem 3
-
+print "~~~~~~~~~~~ PROBLEM 3 ~~~~~~~~~~~~~"
 def element_at (some_list, index):
   print some_list[index - 1]
   #problem stated convention that k=1 returns first element
@@ -38,7 +38,7 @@ element_at(another_list, 1)
 
 
 #Problem 4
-
+print "~~~~~~~~~~~ PROBLEM 4 ~~~~~~~~~~~~~"
 def count (some_list):
   #print len(some_list)
   #^too easy
@@ -56,7 +56,7 @@ count(another_list)
 
 
 #Problem 5
-
+print "~~~~~~~~~~~ PROBLEM 5 ~~~~~~~~~~~~~"
 def reverse (some_list):
   some_list.reverse()
   print some_list
@@ -69,7 +69,7 @@ reverse(another_list)
 
 
 #Problem 6
-
+print "~~~~~~~~~~~ PROBLEM 6 ~~~~~~~~~~~~~"
 def is_palindrome (some_list):
   for index in range(0, len(some_list)):
     if (some_list[index] != some_list[len(some_list) - 1 - index]):
@@ -77,21 +77,21 @@ def is_palindrome (some_list):
   return True
 
 a_list = ['s', 'p', 'a', 'm']
-#print is_palindrome(a_list)
+print is_palindrome(a_list)
 
 another_list = ['k', 'a', 'y', 'a', 'k']
-#print is_palindrome(another_list)
+print is_palindrome(another_list)
 
 
 another_list = [1, 2, 3, 2, 1]
-#print is_palindrome(another_list)
+print is_palindrome(another_list)
 
 
 #work on lists to do problems 7-30 
 
 
 #Problem 31
-
+print "~~~~~~~~~~~ PROBLEM 31 ~~~~~~~~~~~~"
 def isPrime (n):
   print n,
   if (n == 1): 
@@ -110,3 +110,27 @@ print isPrime(19)
 print isPrime(83)
 print isPrime(91)
 print isPrime(3571)       
+
+#Problem 32
+#recursively uses Euclid's Algorithm (http://en.wikipedia.org/wiki/Euclidean_algorithm)
+print "~~~~~~~~~~~ PROBLEM 32 ~~~~~~~~~~~~"
+def gcd (a, b):
+  #assuming a >= b
+  #swap the arguments if b > a
+  if (b > a): 
+    gcd (b, a)  
+
+  #now we have ensured a >= b  
+
+  if (a % b == 0):
+    return b 
+
+  #else a % b != 0
+  return gcd(b, a % b)    
+  
+
+print gcd(2, 4) 
+print gcd(4, 7)
+print gcd(12, 1032)
+print gcd(1785, 546)
+print gcd(31415926534676736647, 438478473847834834784748)
