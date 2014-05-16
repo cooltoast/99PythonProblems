@@ -173,20 +173,25 @@ print "How many totatives of 36? ", len(phi(36)), phi(36)
 
 print "~~~~~~~~~~~ PROBLEM 35 ~~~~~~~~~~~~"
 def prime_factors (n):
+  prime_factors = []
+
   #easy basic case
   if (isPrime(n)):
-    return n
+    prime_factors.append(n)
+    return prime_factors
 
   #find all primes up to n/2  
   #check for divisibilty, append to a list if true
-  prime_factors = []
   for i in range (2, n/2 + 1):
-    if (isPrime(i) and n % i == 0):
+    while (isPrime(i) and n % i == 0):
       prime_factors.append(i)
+      n = n/i
 
   return prime_factors   
 
+print "Prime factors of 7 are: ", prime_factors(7)
 print "Prime factors of 15 are: ", prime_factors(15)
 print "Prime factors of 34 are: ", prime_factors(34)
 print "Prime factors of 24 are: ", prime_factors(24)
+print "Prime factors of 144 are: ", prime_factors(144)
 print "Prime factors of 43735 are: ", prime_factors(43735)
