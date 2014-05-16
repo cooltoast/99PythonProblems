@@ -243,7 +243,7 @@ print "Prime factorization of 43735 is: ", prime_factors_mult(43735)
 #prints primes such that lower <= primes[] <= upper
 print "~~~~~~~~~~~ PROBLEM 39 ~~~~~~~~~~~~"
 def primelist (lower, upper):
-  #if upper is <2, than we can't list any primes
+  #if upper is <2, then we can't list any primes
   if (upper < 2):
     return
 
@@ -260,5 +260,36 @@ print "Primes btwn 23 and 57 inclusive: ", primelist(23, 57)
 print "Primes btwn 11 and 67 inclusive: ", primelist(11, 67)
 print "Primes btwn 10 and 30 inclusive: ", primelist(10, 30)
 print "Primes btwn 0 and 100 inclusive: ", primelist(0, 100)
+
+
+#Problem 40
+#prolem asks to print one goldbach composition possibilty
+#screw that, print all possibilities
+#prints all possible goldbach compositions of a number (http://en.wikipedia.org/wiki/Goldbach's_conjecture)
+print "~~~~~~~~~~~ PROBLEM 40 ~~~~~~~~~~~~"
+def goldbach (n):
+  #if n is odd, then we can't show goldbach composition
+  if (n%2 != 0 or n <= 2):
+    return
+
+
+  list_of_primes = primelist(0, n/2)  
+  #^generate primes up to n/2, inclusive
+
+  goldbach_list = []
+  goldbach_pair = []
+
+  for prime in list_of_primes:
+    if (isPrime(n - prime)):
+      goldbach_pair = [prime, n - prime]
+      goldbach_list.append(goldbach_pair)
+
+  return goldbach_list
+
+print "Goldbach composition of 1: ", goldbach(1)
+print "Goldbach composition of 2: ", goldbach(2)
+print "Goldbach composition of 28: ", goldbach(28)
+print "Goldbach composition of 36: ", goldbach(36)
+print "Goldbach composition of 49: ", goldbach(49)
 
 
