@@ -91,18 +91,23 @@ print is_palindrome(another_list)
 
 #Problem 7
 print "~~~~~~~~~~~ PROBLEM 7 ~~~~~~~~~~~~~"
-def flatten(some_list, flattened_list):   
+def flatten(some_list, flat_list):   
   for i in some_list:
       if isinstance(i, list):
-          flatten(i, flattened_list)
+          flatten(i, flat_list)
       else:
-          flattened_list.append(i)
-  return outlist
+          flat_list.append(i)
+  return flat_list
 
-a_list = [0, 1, [2, [3]], 4, 5, [6, 7], [8,[9,[10]]]]
-outlist = []
-print flatten(a_list, outlist)
+a_list = [0, 1, [2, [3]], [[[[4]]]], 5, [6, 7], [8,[9,[10]]]]
+a_flat_list = []
+b_list = [[[[[0]]]],[1,2,3],[4,5,6], [7], [8,9], 10]
+b_flat_list = []
 
+print "Original list:  ", a_list
+print "Flattened list: ", flatten(a_list, a_flat_list)
+print "Original list:  ", b_list
+print "Flattened list: ", flatten(b_list, b_flat_list)
 
 #Problem 8
 print "~~~~~~~~~~~ PROBLEM 8 ~~~~~~~~~~~~~"
