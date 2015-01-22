@@ -16,7 +16,6 @@ last(another_list)
 
 #Problem 2
 print "~~~~~~~~~~~ PROBLEM 2 ~~~~~~~~~~~~~"
-
 def penultimate (some_list):
   print some_list[len(some_list) - 2]
 
@@ -29,7 +28,6 @@ penultimate(another_list)
 
 #Problem 3
 print "~~~~~~~~~~~ PROBLEM 3 ~~~~~~~~~~~~~"
-
 def element_at (some_list, index):
   print some_list[index - 1]
   #problem stated convention that k=1 returns first element
@@ -43,7 +41,6 @@ element_at(another_list, 1)
 
 #Problem 4
 print "~~~~~~~~~~~ PROBLEM 4 ~~~~~~~~~~~~~"
-
 def count (some_list):
   #print len(some_list)
   #^too easy
@@ -62,7 +59,6 @@ count(another_list)
 
 #Problem 5
 print "~~~~~~~~~~~ PROBLEM 5 ~~~~~~~~~~~~~"
-
 def reverse (some_list):
   some_list.reverse()
   print some_list
@@ -76,8 +72,6 @@ reverse(another_list)
 
 #Problem 6
 print "~~~~~~~~~~~ PROBLEM 6 ~~~~~~~~~~~~~"
-#Problem 6
-
 def is_palindrome (some_list):
   for index in range(0, len(some_list)):
     if (some_list[index] != some_list[len(some_list) - 1 - index]):
