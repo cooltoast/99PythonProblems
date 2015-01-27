@@ -5,38 +5,42 @@ import itertools
 #Problem 1
 print "~~~~~~~~~~~ PROBLEM 1 ~~~~~~~~~~~~~"
 def last (some_list):
-  print some_list[len(some_list) - 1]
+  if not some_list:
+    return None
+  return some_list[-1]
 
 a_list = [0, 1, 2, 3, 4, 5, 6, 7]
-last(a_list)
+assert(last(a_list) is 7)
 
 another_list = ['a', 'b', 'c', 'd', 'e', 'f']
-last(another_list)
+assert(last(another_list) is 'f')
 
 
 #Problem 2
 print "~~~~~~~~~~~ PROBLEM 2 ~~~~~~~~~~~~~"
 def penultimate (some_list):
-  print some_list[len(some_list) - 2]
+  if len(some_list) <= 1:
+    return None
+  return some_list[-2]
 
 a_list = [0, 1, 2, 3, 4, 5, 6, 7]
-penultimate(a_list)
+assert(penultimate(a_list) is 6)
 
 another_list = ['a', 'b', 'c', 'd', 'e', 'f']
-penultimate(another_list)
+assert(penultimate(another_list) is 'e')
 
 
 #Problem 3
 print "~~~~~~~~~~~ PROBLEM 3 ~~~~~~~~~~~~~"
 def element_at (some_list, index):
-  print some_list[index - 1]
-  #problem stated convention that k=1 returns first element
+  # problem stated convention that k=1 returns first element
+  return some_list[index - 1]
 
 a_list = [0, 1, 2, 3, 4, 5, 6, 7]
-element_at(a_list, 3)
+assert(element_at(a_list, 3) is 2)
 
 another_list = ['a', 'b', 'c', 'd', 'e', 'f']
-element_at(another_list, 1)
+assert(element_at(another_list, 1) is 'a')
 
 
 #Problem 4
@@ -48,26 +52,28 @@ def count (some_list):
   length = 0
   for i in some_list:
   	length += 1
-  print length	
+  return length
 
 a_list = [0, 1, 2, 3, 4, 5, 6, 7]
-count(a_list)
+assert(count(a_list) is len(a_list))
 
 another_list = ['a', 'b', 'c', 'd', 'e', 'f']
-count(another_list)
+assert(count(another_list) is len(another_list))
 
 
 #Problem 5
 print "~~~~~~~~~~~ PROBLEM 5 ~~~~~~~~~~~~~"
 def reverse (some_list):
-  some_list.reverse()
-  print some_list
+  temp = []
+  for x in some_list:
+    temp = [x] + temp
+  return temp
 
 a_list = [0, 1, 2, 3, 4, 5, 6, 7]
-reverse(a_list)
+assert(reverse(a_list) == a_list[::-1])
 
 another_list = ['a', 'b', 'c', 'd', 'e', 'f']
-reverse(another_list)
+assert(reverse(another_list) == another_list[::-1])
 
 
 #Problem 6
