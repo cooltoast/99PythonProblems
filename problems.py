@@ -126,7 +126,7 @@ print compress([1, 1, 2, 1, 2, 3, 4, 4, 5, 6, 3, 5, 7, 8, 9, 10, 10])
 
 #Problem 9
 print "~~~~~~~~~~~ PROBLEM 9 ~~~~~~~~~~~~~"
-def pack(some_list):
+def _pack(some_list):
   packed_list = []   
   sub_list = []
   for i in some_list:
@@ -138,10 +138,32 @@ def pack(some_list):
         packed_list.append(sub_list)
   return packed_list   
 
-a_list = [1, 1, 2, 1, 2, 3, 4, 4, 5, 6, 3, 5, 7, 8, 9, 10, 10]
-print a_list
-print pack([1, 1, 2, 1, 2, 3, 4, 4, 5, 6, 3, 5, 7, 8, 9, 10, 10])
+def pack(a_list):
+  if not a_list:
+    return a_list
 
+  packed_list = []
+  i = 0
+  while(i < len(a_list)):
+    sub_list = []
+    j = i + 1
+    while(j < len(a_list) and a_list[i] == a_list[j]):
+      sub_list.append(a_list[j])
+      j += 1
+    if sub_list:
+      sub_list.append(a_list[i])
+      packed_list.append(sub_list)
+    else:
+      packed_list.append(a_list[i])
+    i = j
+  return packed_list
+
+
+#a_list = [1, 1, 2, 1, 2, 3, 4, 4, 5, 6, 3, 5, 7, 8, 9, 10, 10]
+#print pack([1, 1, 2, 1, 2, 3, 4, 4, 5, 6, 3, 5, 7, 8, 9, 10, 10])
+assert(pack([1,1,1,4,45,632,4,7,45,34]) == [[1,1,1],4,45,632,4,7,45,34])
+assert(pack([1,1,2,1,2,3,4,4,5,6,3,5,7,8,9,10,10]) == [[1,1],2,1,2,3,[4,4],5,6,3,5,7,8,9,[10,10]])
+assert(pack(range(10)) == range(10))
 
 #work on lists to do problems 7-30 
 
