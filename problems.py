@@ -126,18 +126,6 @@ print compress([1, 1, 2, 1, 2, 3, 4, 4, 5, 6, 3, 5, 7, 8, 9, 10, 10])
 
 #Problem 9
 print "~~~~~~~~~~~ PROBLEM 9 ~~~~~~~~~~~~~"
-def _pack(some_list):
-  packed_list = []   
-  sub_list = []
-  for i in some_list:
-    sub_list = [i]
-    for j in some_list[1:]:
-      if i == j:
-        sub_list.append(j)
-      else:
-        packed_list.append(sub_list)
-  return packed_list   
-
 def pack(a_list):
   if not a_list:
     return a_list
@@ -159,8 +147,6 @@ def pack(a_list):
   return packed_list
 
 
-#a_list = [1, 1, 2, 1, 2, 3, 4, 4, 5, 6, 3, 5, 7, 8, 9, 10, 10]
-#print pack([1, 1, 2, 1, 2, 3, 4, 4, 5, 6, 3, 5, 7, 8, 9, 10, 10])
 assert(pack([1,1,1,4,45,632,4,7,45,34]) == [[1,1,1],4,45,632,4,7,45,34])
 assert(pack([1,1,2,1,2,3,4,4,5,6,3,5,7,8,9,10,10]) == [[1,1],2,1,2,3,[4,4],5,6,3,5,7,8,9,[10,10]])
 assert(pack(range(10)) == range(10))
