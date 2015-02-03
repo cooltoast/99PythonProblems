@@ -113,13 +113,13 @@ assert(flatten(b_list, []) == range(11))
 
 #Problem 8
 print "~~~~~~~~~~~ PROBLEM 8 ~~~~~~~~~~~~~"
-def compress (some_list):
-  for i in range(0, len(some_list)):
-    for j in range(len(some_list) - 1, i, -1):
-      if (some_list[i] == some_list[j]):
-        some_list.remove(some_list[j])  
-      
-  return some_list
+def compress(a_list):
+  for i in range(len(a_list)):
+    for j in range(len(a_list) - 1, i, -1):
+      if (a_list[i] == a_list[j]):
+        a_list.remove(a_list[j])
+
+  return a_list
 
 print compress([1, 1, 2, 1, 2, 3, 4, 4, 5, 6, 3, 5, 7, 8, 9, 10, 10])
 
