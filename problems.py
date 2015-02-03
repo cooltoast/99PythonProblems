@@ -79,20 +79,20 @@ assert(reverse(another_list) == another_list[::-1])
 #Problem 6
 print "~~~~~~~~~~~ PROBLEM 6 ~~~~~~~~~~~~~"
 def is_palindrome (some_list):
-  for index in range(0, len(some_list)):
+  for index in xrange(len(some_list)/2):
     if (some_list[index] != some_list[len(some_list) - 1 - index]):
       return False
   return True
 
 a_list = ['s', 'p', 'a', 'm']
-print is_palindrome(a_list)
+assert(is_palindrome(a_list) == False)
 
 another_list = ['k', 'a', 'y', 'a', 'k']
-print is_palindrome(another_list)
+assert(is_palindrome(another_list) == True)
 
 
 another_list = [1, 2, 3, 2, 1]
-print is_palindrome(another_list)
+assert(is_palindrome(another_list) == True)
 
 
 #Problem 7
