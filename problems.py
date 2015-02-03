@@ -106,14 +106,10 @@ def flatten(some_list, flat_list):
   return flat_list
 
 a_list = [0, 1, [2, [3]], [[[[4]]]], 5, [6, 7], [8,[9,[10]]]]
-a_flat_list = []
 b_list = [[[[[0]]]],[1,2,3],[4,5,6], [7], [8,9], 10]
-b_flat_list = []
 
-print "Original list:  ", a_list
-print "Flattened list: ", flatten(a_list, a_flat_list)
-print "Original list:  ", b_list
-print "Flattened list: ", flatten(b_list, b_flat_list)
+assert(flatten(a_list, []) == range(11))
+assert(flatten(b_list, []) == range(11))
 
 #Problem 8
 print "~~~~~~~~~~~ PROBLEM 8 ~~~~~~~~~~~~~"
