@@ -171,11 +171,12 @@ print "~~~~~~~~~~~ PROBLEM 15 ~~~~~~~~~~~~~"
 def replicate (some_list, n):
   duplicate_list = []
   for i in some_list:
-    for index in range(0,n):
+    for index in xrange(n):
       duplicate_list.append(i) 
   return duplicate_list  
 
-print replicate([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 4)
+assert(replicate([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 4) ==
+       [1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9, 10, 10, 10, 10])
 
 
 #Problem 16
