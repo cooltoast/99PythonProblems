@@ -206,12 +206,11 @@ def split_list (some_list, n):
   return some_list[:n], some_list[n:]   
 
 a_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-print "         Original list: ", a_list
-print "Split list at 3rd element: ", split_list([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3)
-print "Split list at 4th element: ", split_list([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 4)
-print "Split list at 5th element: ", split_list([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5)
-print "Split list at 6th element: ", split_list([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 6)
-print "Split list at 7th element: ", split_list([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 7)
+assert(split_list([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3) == ([1, 2, 3], [4, 5, 6, 7, 8, 9, 10]))
+assert(split_list([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 4) == ([1, 2, 3, 4], [5, 6, 7, 8, 9, 10]))
+assert(split_list([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5) == ([1, 2, 3, 4, 5], [6, 7, 8, 9, 10]))
+assert(split_list([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 6) == ([1, 2, 3, 4, 5, 6], [7, 8, 9, 10]))
+assert(split_list([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 7) == ([1, 2, 3, 4, 5, 6, 7], [8, 9, 10]))
 
 
 #Problem 18
