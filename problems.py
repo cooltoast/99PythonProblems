@@ -190,17 +190,14 @@ def drop (some_list, n):
   return some_list  
 
 a_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-print "         Original list: ", a_list
-print "Drop every 2nd element: ", drop([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2)
-print "Drop every 3rd element: ", drop([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3)
-print "Drop every 4th element: ", drop([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 4)
-print "Drop every 5th element: ", drop([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5)
-print "Drop every 6th element: ", drop([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 6)
-print "Cumulative dropping commence..."
-print "         Original list: ", a_list
-print "Drop every 2nd element: ", drop(a_list, 2)
-print "Drop every 3rd element: ", drop(a_list, 3)
-print "Drop every 4th element: ", drop(a_list, 4)
+assert(drop([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2) ==  [1, 3, 5, 7, 9])
+assert(drop([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3) == [1, 2, 4, 5, 7, 8, 10])
+assert(drop([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 4) == [1, 2, 3, 5, 6, 7, 9, 10])
+assert(drop([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5) == [1, 2, 3, 4, 6, 7, 8, 9])
+assert(drop([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 6) == [1, 2, 3, 4, 5, 7, 8, 9, 10])
+assert(drop(a_list, 2) == [1, 3, 5, 7, 9])
+assert(drop(a_list, 3) == [1, 3, 7, 9])
+assert(drop(a_list, 4) == [1, 3, 7])
 
 
 #Problem 17
