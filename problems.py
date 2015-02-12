@@ -232,11 +232,10 @@ def rotate(some_list, n):
   return temp_list + some_list[:n]
 
 a_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-print "         Original list:     ", a_list
-print "rotate list at 3rd element: ", rotate([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3)
-print "rotate list at 6th element: ", rotate([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 6)
-print "rotate list at 9th element: ", rotate([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 9)
-print "rotate list at 2nd element: ", rotate([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2)
+assert(rotate([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3) == [4, 5, 6, 7, 8, 9, 10, 1, 2, 3])
+assert(rotate([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 6) == [7, 8, 9, 10, 1, 2, 3, 4, 5, 6])
+assert(rotate([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 9) == [10, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+assert(rotate([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2) == [3, 4, 5, 6, 7, 8, 9, 10, 1, 2])
 
 
 #Problem 20
