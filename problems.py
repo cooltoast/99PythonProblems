@@ -263,10 +263,9 @@ def insert_at (some_list, n, index):
   return some_list
      
 a_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-print "Original list:        ", a_list
-print "Insert 15 at index 2: ", insert_at(a_list, 15, 2)
-print "Insert 45 at index 1: ", insert_at(a_list, 45, 1)
-print "Insert 88 at index 5: ", insert_at(a_list, 88, 5)
+assert(insert_at(a_list, 15, 2) == [0, 1, 15, 2, 3, 4, 5, 6, 7, 8, 9])
+assert(insert_at(a_list, 45, 1) == [0, 45, 1, 15, 2, 3, 4, 5, 6, 7, 8, 9])
+assert(insert_at(a_list, 88, 5) == [0, 45, 1, 15, 2, 88, 3, 4, 5, 6, 7, 8, 9])
 
 
 #Problem 22
