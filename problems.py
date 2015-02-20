@@ -246,17 +246,14 @@ def remove_at (some_list, n):
   return some_list  
 
 a_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-print "Original list:        ", a_list
-print "Drop the 2nd element: ", remove_at([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 2)
-print "Drop the 3rd element: ", remove_at([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 3)
-print "Drop the 4th element: ", remove_at([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 4)
-print "Cumulative dropping commence..."
-print "Original list:        ", a_list
-print "Drop the 2nd element: ", remove_at(a_list, 2)
-print "Drop the 3rd element: ", remove_at(a_list, 3)
-print "Drop the 4th element: ", remove_at(a_list, 4)
-print "Drop the 5th element: ", remove_at(a_list, 5)
-print "Drop the 6th element: ", remove_at(a_list, 6)
+assert(remove_at([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 2) == [0, 2, 3, 4, 5, 6, 7, 8, 9])
+assert(remove_at([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 3) == [0, 1, 3, 4, 5, 6, 7, 8, 9])
+assert(remove_at([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 4) == [0, 1, 2, 4, 5, 6, 7, 8, 9])
+assert(remove_at(a_list, 2) == [0, 2, 3, 4, 5, 6, 7, 8, 9])
+assert(remove_at(a_list, 3) == [0, 2, 4, 5, 6, 7, 8, 9])
+assert(remove_at(a_list, 4) == [0, 2, 4, 6, 7, 8, 9])
+assert(remove_at(a_list, 5) == [0, 2, 4, 6, 8, 9])
+assert(remove_at(a_list, 6) == [0, 2, 4, 6, 8])
 
 
 #Problem 21
